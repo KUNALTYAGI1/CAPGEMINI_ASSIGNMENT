@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+        
+        <context:annotation-config />
+    
+    
+    <bean id="Accounts" class="springcore_assignment3.BankAccountRepositoryIml">
+	    <property name="accounts">
+		    <list>
+			    <ref bean="list0"/>
+			    <ref bean="list1"/>
+		    </list>
+	    </property>
+    </bean>
+    
+    
+    <bean id="list0" class="springcore_assignment3.BankAccount">
+    	<constructor-arg index="0" type="int" value="1"/>
+    	<constructor-arg index="1" value="Kunal"/>
+    	<constructor-arg index="2" value="Saving"/>
+    	<constructor-arg index="3" value="100"/>
+    </bean>
+    
+    <bean id="list1" class="springcore_assignment3.BankAccount">
+    	<constructor-arg index="0" type="int" value="2"/>
+    	<constructor-arg index="1" value="jeetu"/>
+    	<constructor-arg index="2" value="current"/>
+    	<constructor-arg index="3" value="500"/>
+    </bean>
+    
+    <bean id="BankAccountService" class="springcore_assignment3.BankAccountServiceImpl"/>
+    
+    
+    
+</beans>
