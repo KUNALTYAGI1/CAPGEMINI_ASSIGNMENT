@@ -1,11 +1,17 @@
 # CAPGEMINI_ASSIGNMENT
 */This assignment include mongodb concept-/*
 Find, Update, View, Insert, alter, aggreagate, Delete.
-Java assignment 1 including core java concept. 
+
+Java assignment 1 including core java concept.
+
 Java assignment 2 includes oops concepts.
+
 Java assignment 3 includes exception handling concept.
+
 java assignement 4 and 5 includes colllections concepts.
+
 Spring assignments includes core spring assignment where injection of object , autowiring through annotation and xml is done.
+
 
 # GIT HUB COMMANDS
 git status -> status
@@ -73,3 +79,48 @@ git stash list
 git checkout -b testing-rebase
 
 git rebase master
+
+# MONG0 BD
+
+BSON -> Binary representation of JSON. (Increase speed and more space).
+
+MongoDB use Collections for Storing Data.
+
+MongoDB use CAP theorm { Consistency , Availabilty , Partition Tolerance }
+
+Patterns in Mongo -> Schema Versioning , Subset , Computed , Bucket , Extended Reference
+
+default port number : 27017
+
+# MONGO SHELL COMMANDS
+show dbs -> show databases
+
+use first-test -> u can use an Database that doesn't exist
+
+db.users.insertOne( { Name : 'Manav' , Age ; 29 } ) -> add one object to data
+
+db.users.insertMany( [ { Name : 'Manav' , Age ; 29 } , { Name : 'Manav' , Age ; 29 } ] ) -> add Many object to data
+
+show collections -> show all collections we created (record)
+
+db.collections -> give name to inplace of collections to record holder
+
+db.users.find() -> find record inside
+
+db.users.find( { Age : { $gt : 29 } } ) ->find data of Age is greater than 29 | gt = greatert than , lt = lower than , gte = greater than and equal to
+
+db.users.insertOne({name: {F_Name : 'Manav' , L_Name: 'Verma' },Age : 31 })
+
+db.users.find({"name.F_Name" : 'Manav'}) -> find sub record like name to first name
+
+db.users.update({name:'Manav'},{$set : {Age: 30}}) -> update record
+
+db.users.deleteOne({name: 'Manav Verma'}) ->delete one record
+
+db.createCollection('Books') -> create Collection
+
+db.dropDatabase() -> drop database
+
+db.createCollection('Name',{ capped : true , size: give_size , max : give_limit }) -> CApped Collection , it will limit the collection size
+
+db.users.find( { $or: [ { name : 'Manav' } , { Age : {$gt : 29 } } ] } ) -> filter using Or and And opretator
