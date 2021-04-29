@@ -97,9 +97,9 @@ show dbs -> show databases
 
 use first-test -> u can use an Database that doesn't exist
 
-db.users.insertOne( { Name : 'Manav' , Age ; 29 } ) -> add one object to data
+db.users.insertOne( { Name : 'Kunal' , Age ; 29 } ) -> add one object to data
 
-db.users.insertMany( [ { Name : 'Manav' , Age ; 29 } , { Name : 'Manav' , Age ; 29 } ] ) -> add Many object to data
+db.users.insertMany( [ { Name : 'Kunal' , Age ; 29 } , { Name : 'Kunal' , Age ; 29 } ] ) -> add Many object to data
 
 show collections -> show all collections we created (record)
 
@@ -109,13 +109,13 @@ db.users.find() -> find record inside
 
 db.users.find( { Age : { $gt : 29 } } ) ->find data of Age is greater than 29 | gt = greatert than , lt = lower than , gte = greater than and equal to
 
-db.users.insertOne({name: {F_Name : 'Manav' , L_Name: 'Verma' },Age : 31 })
+db.users.insertOne({name: {F_Name : 'Kunal' , L_Name: 'Tyagi' },Age : 31 })
 
-db.users.find({"name.F_Name" : 'Manav'}) -> find sub record like name to first name
+db.users.find({"name.F_Name" : 'Kunal'}) -> find sub record like name to first name
 
-db.users.update({name:'Manav'},{$set : {Age: 30}}) -> update record
+db.users.update({name:'Kunal'},{$set : {Age: 30}}) -> update record
 
-db.users.deleteOne({name: 'Manav Verma'}) ->delete one record
+db.users.deleteOne({name: 'Kunal Tyagi'}) ->delete one record
 
 db.createCollection('Books') -> create Collection
 
