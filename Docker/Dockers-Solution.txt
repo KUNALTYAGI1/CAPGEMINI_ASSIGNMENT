@@ -1,0 +1,50 @@
+1 - docker -v
+
+2 - docker pull
+
+3 - docker images
+
+4 - docker images -q
+
+5 - docker run -it nginx
+
+6 - docker ps
+7 - docker ps -a
+
+8 - docker inspect
+9 - docker inspect
+
+10 - docker pull tomcat
+11 - docker run -it --name mytomcat tomcat
+
+12 - docker inspect 99ae58ae928e | grep "IPAddress"
+13 - docker port 99ae58ae928e 
+15 - docker image inspect 62d49f9bab67 -f={{.Size}}
+16 - using ls in bash
+17 - docker image inspect 62d49f9bab67 -f={{.Config.ExposedPorts}}
+18 - running another container
+19 - docker pull ubuntu:20.04
+	docker pull ubuntu:18.04
+20 - docker attach old_ubuntu
+21 - docker detach new_ubuntu
+22 - docker ps -a
+23 - tomcat server started
+24 - Generating logs
+25 -  docker start old_ubuntu
+	- docker attach old_ubuntu
+26 - sudo -i
+27 - touch blankfile.txt
+28 - apt-get update 
+29 - exit
+30 - Running
+31 - docker start new_ubuntu
+	- docker attach new_ubuntu
+32 - sudo -i
+33 - not visible
+34 - yes
+35 - creating dockfile in local and build an image
+37 - tomcat already server running
+38 - touch index.html
+	- vim index.html
+		<h1>This is tomcat Container</h1>
+if we visit to localhost:8080//index.html will see "This is tomcat Container"

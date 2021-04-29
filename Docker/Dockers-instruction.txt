@@ -1,0 +1,70 @@
+Basic Commands
+docker version
+docker --v
+docker info
+docker --help
+docker login
+--------------------------------
+Images
+docker images
+docker pull
+docker rmi
+--------------------------------
+Container
+docker ps
+docker run
+docker start
+docker stop
+--------------------------------
+System
+docker stats
+docker system df
+docker system prune
+--------------------------------
+Dockerfile - A file which contains instruction to build an image.
+FROM
+RUN
+CMD
+step1 - create a file name Dockerfile
+step2 - Add instructions in Dockerfile
+step3 - Build dockerfile to create image
+step4 - run image to create container
+
+docker build . 
+     or
+docker build -t myimage1:1.0
+--------------------------------
+Docker Compose
+It is a tool for running and definnig multi-container docker operations.
+Used yaml file to configure application services.
+Start all services with a single command - docker compose up
+Stop all services with a single command - docker compose down
+
+Install docker compose
+create docker compose file on any location on your system
+	- docker-compose.yml
+	- vim docker-compose.yml
+	- {version:'3.0'
+	   servies:
+		web:
+		   image: nginx
+		database:
+		    image: redis
+ 	   }
+
+docker-compose up -d
+docker-compose -down 
+--------------------------------
+Docker volumes
+By default all files created inside a container are stored on container layer which means if we delete container, data also deleted locally. There volumes comes in a picture. It save container data externally.
+
+S1 - docker volume create myvol1
+optional {
+	-> docker volume ls
+	-> docker volume inspect myvol1
+	}
+
+S2 - docker run --name Myjenkins1 -v myvol1:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins
+
+Bind means provide own location for volume
+--------------------------------
