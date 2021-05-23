@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: JWT-SERVICE
+   
+   
+server:
+  port: 9105
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+  instance:
+    hostname: localhost
+      
