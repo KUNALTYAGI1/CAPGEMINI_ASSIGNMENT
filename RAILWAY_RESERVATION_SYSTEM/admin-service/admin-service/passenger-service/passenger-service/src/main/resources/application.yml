@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: PASSENGER-SERVICE
+   
+   
+server:
+  port: 9106    
+   
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+  instance:
+    hostname: localhost
+      
